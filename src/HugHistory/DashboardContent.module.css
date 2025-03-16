@@ -1,0 +1,15 @@
+.content {
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  max-width: 1025px;
+  margin-top: 32px;
+  margin-left: 80px;
+  display: flex;
+}
+
+@media (width<=991px) {
+  .content {
+    max-width: 100%;
+  }
+}

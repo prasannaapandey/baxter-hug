@@ -1,0 +1,60 @@
+.navigation {
+  background-color: #fff;
+  border-color: #e0e0e0;
+  border-bottom-width: 1px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  padding: 12px 12px 12px 80px;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (width<=991px) {
+  .navigation {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+}
+
+.title {
+  color: #000;
+  letter-spacing: -0.2px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.buttonContainer {
+  justify-content: start;
+  align-items: start;
+  gap: 12px;
+  display: flex;
+}
+
+.button {
+  background-color: #eee;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 56px;
+  min-height: 40px;
+  padding: 0 16px;
+  display: flex;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  align-self: stretch;
+  width: 24px;
+  margin: auto;
+}
