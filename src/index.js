@@ -1,17 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './MainPage/Dashboard.module.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-function Dashboard() {
-  return (
-    <main className={styles.dashboard}>
-      <h1>Dashboard</h1>
-      <nav>
-        <Link to="/more-info">More Info</Link>
-        <Link to="/hug-history">Hug History</Link>
-      </nav>
-    </main>
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
   );
-}
-
-export default Dashboard;
