@@ -1,7 +1,5 @@
-// src/Dashboard/index.js
 "use client";
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Dashboard.module.css";
 import NavigationHeader from "./NavigationHeader";
 import ControlPanel from "./ControlPanel";
@@ -16,10 +14,6 @@ function Dashboard() {
         <ControlPanel />
         <StatusSection />
         <BottomSection />
-        <nav>
-          <Link to="/hug-history">Go to Hug History</Link>
-          <Link to="/more-info">Go to More Info</Link>
-        </nav>
       </section>
     </main>
   );

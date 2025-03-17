@@ -1,27 +1,20 @@
 "use client";
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Dashboard.module.css";
-import NavigationHeader from "./NavigationHeader";
+import NavigationBar from "./NavigationBar";
 import ControlPanel from "./ControlPanel";
-import StatusSection from "./StatusSection";
-import BottomSection from "./BottomSection";
+import RobotPosePanel from "./RobotPosePanel";
 
-function MoreInfo() {
+function Dashboard() {
   return (
     <main className={styles.dashboard}>
-      <NavigationHeader />
-      <section className={styles.content}>
+      <NavigationBar />
+      <section className={styles.div}>
         <ControlPanel />
-        <StatusSection />
-        <BottomSection />
-        <nav>
-          <Link to="/">Back to Main Dashboard</Link>
-          <Link to="/hug-history">Go to Hug History</Link>
-        </nav>
+        <RobotPosePanel />
       </section>
     </main>
   );
 }
 
-export default MoreInfo;
+export default Dashboard;

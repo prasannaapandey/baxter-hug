@@ -1238,15 +1238,15 @@
   .camera3 {
     max-width: 100%;
     margin-top: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .topDownSim {
   align-self: start;
 }
 .img4 {
-  aspect-ratio: 1.35;
+  aspect-ratio: 1.45;
   object-fit: contain;
   object-position: center;
   border-radius: 17px;

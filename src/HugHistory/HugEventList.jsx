@@ -1,22 +1,40 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./HugEventList.module.css";
 
 function HugEventList() {
+  const [showEvents, setShowEvents] = useState(false);
+
+  // Sample Hug Event Dates
+  const hugEvents = [
+    "March 1, 2025",
+    "March 5, 2025",
+    "March 12, 2025",
+    "March 20, 2025",
+    "March 25, 2025",
+  ];
+
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Hug Event List</h2>
-      <div className={styles.imageContainer}>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb4ca64bcd17de23568fe7ac9162c40597c3e50575595222fdde9ce9a96fa41b?placeholderIfAbsent=true&apiKey=d7461f4ff0754d6cbcff4af3552e2222"
-          alt="Event illustration"
-          className={styles.mainImage}
-        />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/745f4a325798408d80543bbacf1852135593f5c0514bd614a697a7386fbb93c1?placeholderIfAbsent=true&apiKey=d7461f4ff0754d6cbcff4af3552e2222"
-          alt="Event icon"
-          className={styles.icon}
-        />
-      </div>
+
+      {/* Toggle Button */}
+      <button
+        className={styles.toggleButton}
+        onClick={() => setShowEvents(!showEvents)}
+      >
+        {showEvents ? "Hide Hug Events" : "Show Hug Events"}
+      </button>
+
+      {/* Hug Events List - Only Shows if Toggled */}
+      {showEvents && (
+        <ul className={styles.eventList}>
+          {hugEvents.map((date, index) => (
+            <li key={index} className={styles.eventItem}>{date}</li>
+          ))}
+        </ul>
+      )}
+
     </section>
   );
 }
